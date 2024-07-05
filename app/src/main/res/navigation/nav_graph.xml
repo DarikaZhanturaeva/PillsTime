@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainPillsFragment">
+
+    <fragment
+        android:id="@+id/addPillsFragment"
+        android:name="com.example.pillstime.ui.fragments.AddPillsFragment"
+        android:label="fragment_add_pills"
+        tools:layout="@layout/fragment_add_pills" />
+    <fragment
+        android:id="@+id/pillsGreenFragment"
+        android:name="com.example.pillstime.ui.fragments.PillsGreenFragment"
+        android:label="fragment_pills_green"
+        tools:layout="@layout/fragment_pills_green" />
+    <fragment
+        android:id="@+id/pillsOrangeFragment"
+        android:name="com.example.pillstime.ui.fragments.PillsOrangeFragment"
+        android:label="fragment_pills_orange"
+        tools:layout="@layout/fragment_pills_orange" />
+    <fragment
+        android:id="@+id/pillsRedFragment"
+        android:name="com.example.pillstime.ui.fragments.PillsRedFragment"
+        android:label="fragment_pills_red"
+        tools:layout="@layout/fragment_pills_red" />
+    <fragment
+        android:id="@+id/mainPillsFragment"
+        android:name="com.example.pillstime.ui.fragments.MainPillsFragment"
+        android:label="fragment_main_pills"
+        tools:layout="@layout/fragment_main_pills" />
+</navigation>
