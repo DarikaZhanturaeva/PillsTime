@@ -62,4 +62,10 @@ dependencies {
     //Room
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
+
+    //Koin
+    implementation(libs.koin.android)
+
+    //notification
+    implementation (libs.androidx.work.runtime.ktx)
 }

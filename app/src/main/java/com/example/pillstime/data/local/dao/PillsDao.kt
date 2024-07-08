@@ -1,5 +1,6 @@
 package com.example.pillstime.data.local.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -12,17 +13,17 @@ import com.example.pillstime.data.local.entity.model.PillsModel
 interface PillsDao {
 
     @Query("SELECT * FROM pills")
-    fun getAllPills(): List<PillsModel>
+    fun getAllPills(): LiveData<List<PillsModel>>
 
     @Query("SELECT * FROM pills WHERE id = :id")
     fun getPillsById(id: Int): PillsModel
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPills(pills: PillsModel)
+    suspend fun insertPills(pills: PillsModel)
 
     @Delete
-    fun deletePills(pills: PillsModel)
+    suspend fun deletePills(pills: PillsModel)
 
     @Update
-    fun updatePills(pills: PillsModel)
+    suspend fun updatePills(pills: PillsModel)
 }

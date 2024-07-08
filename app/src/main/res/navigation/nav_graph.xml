@@ -9,10 +9,14 @@
         android:id="@+id/addPillsFragment"
         android:name="com.example.pillstime.ui.fragments.AddPillsFragment"
         android:label="fragment_add_pills"
-        tools:layout="@layout/fragment_add_pills" />
+        tools:layout="@layout/fragment_add_pills" >
+        <action
+            android:id="@+id/action_addPillsFragment_to_mainPillsFragment"
+            app:destination="@id/mainPillsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/pillsGreenFragment"
-        android:name="com.example.pillstime.ui.fragments.PillsGreenFragment"
+        android:name="com.example.pillstime.ui.fragments.green_screen.PillsGreenFragment"
         android:label="fragment_pills_green"
         tools:layout="@layout/fragment_pills_green" />
     <fragment
